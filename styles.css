@@ -1,0 +1,79 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  height: 100%;
+  overflow: hidden;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+#mapa {
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================
+   TOOLTIP (PUNTO 2)
+   ========================= */
+
+#tooltip {
+  position: absolute;
+  background: #0b0b0b;
+  border: 1px solid #ffd500;
+  border-radius: 8px;
+  padding: 12px;
+  min-width: 260px;
+
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+
+  /* CLAVE */
+  display: none;          /* oculto por defecto */
+  pointer-events: none;   /* no bloquea clics */
+  z-index: 9999;
+}
+
+#tooltip.visible {
+  display: block;
+}
+
+.tooltip-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffd500;
+  margin-bottom: 6px;
+}
+
+.tooltip-line {
+  margin: 3px 0;
+}
+
+.tooltip-separator {
+  height: 1px;
+  background: #333;
+  margin: 8px 0;
+}
+
+.tooltip-destino {
+  font-size: 12px;
+  margin: 4px 0;
+  color: #ddd;
+}
+
+.tooltip-destino strong {
+  color: #ffd500;
+}
+
+.ruta-no {
+  color: #ff5252;
+}
+
+.ruta-si {
+  color: #4caf50;
+}
+
