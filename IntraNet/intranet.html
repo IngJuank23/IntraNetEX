@@ -91,7 +91,6 @@
       margin: 4px 0;
       color: #ddd;
     }
-
     /* =====================================================
        COLORES DE ESTADO
        ===================================================== */
@@ -152,7 +151,14 @@
       color: #ccc;
       text-align: center;
     }
-
+ 
+   /* =========================
+        BOTÓN CERRAR SESIÓN
+       ========================= */
+    <button id="logoutBtn" class="logout-btn">
+    🔒 Cerrar sesión
+    </button>
+    
     /* =====================================================
        FIRMA
        ===================================================== */
@@ -171,6 +177,25 @@
     }
   </style>
 </head>
+  
+<script>
+  // ============================================
+  // 🔓 CERRAR SESIÓN
+  // ============================================
+
+  const logoutBtn = document.getElementById("logoutBtn");
+
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", function () {
+      // Limpia sesión
+      localStorage.removeItem("sessionId");
+      localStorage.removeItem("rol");
+
+      // Redirige al login
+      window.location.href = "/IntraNetEX/Login/index.html";
+    });
+  }
+</script>
 
 <body>
 
@@ -997,4 +1022,5 @@ if (btnActualizar) {
 // Carga inicial automática (ANTES ERA EL FETCH)
 cargarDatos();
 </script>
+
 
