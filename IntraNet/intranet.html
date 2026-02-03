@@ -171,26 +171,6 @@
   </style>
 </head>
   
-  // ============================================
-  // 🔓 CERRAR SESIÓN
-  // ============================================
-
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const logoutBtn = document.getElementById("logoutBtn");
-
-  if (logoutBtn) {
-    logoutBtn.addEventListener("click", function () {
-      localStorage.removeItem("sessionId");
-      localStorage.removeItem("rol");
-      window.location.href = "/IntraNetEX/index.html";
-    });
-  }
-
-});
-</script>
-
 <body>
 
 <!-- =====================================================
@@ -227,6 +207,23 @@ document.addEventListener("DOMContentLoaded", function () {
     Última actualización: --
   </div>
 </div>
+
+    <!-- ===========================
+     JS: CERRAR SESIÓN
+     =========================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    if (logoutBtn) {
+      logoutBtn.addEventListener("click", function () {
+        localStorage.removeItem("sessionId");
+        localStorage.removeItem("rol");
+        window.location.href = "/IntraNetEX/index.html";
+      });
+    }
+  });
+</script>
 
 <!-- FIRMA -->
 <footer id="firma">
@@ -1022,6 +1019,7 @@ if (btnActualizar) {
 // Carga inicial automática (ANTES ERA EL FETCH)
 cargarDatos();
 </script>
+
 
 
 
