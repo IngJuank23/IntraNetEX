@@ -29,12 +29,14 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
       localStorage.setItem("sessionId", data.sessionId);
       localStorage.setItem("rol", data.rol);
 
-      window.location.href = "https://ingjuank23.github.io/IntraNetEX/";
+      // 👉 ENTRAR A LA INTRANET REAL
+      window.location.href = "https://ingjuank23.github.io/IntraNetEX/IntraNet/intranet.html";
     })
     .catch(err => {
       console.error(err);
       message.textContent = "Error de conexión con el servidor";
     });
 });
+
 
 
