@@ -2,9 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+
+  <!-- Título que aparece en la pestaña del navegador -->
   <title>Intranet Envíos</title>
 
   <style>
+    /* =====================================================
+       CONFIGURACIÓN GENERAL DE LA PÁGINA
+       ===================================================== */
+
     html, body {
       margin: 0;
       padding: 0;
@@ -19,6 +25,10 @@
       width: 100vw;
       height: 100vh;
     }
+
+    /* =====================================================
+       MAPA SVG
+       ===================================================== */
 
     svg {
       width: 100%;
@@ -41,7 +51,10 @@
       cursor: pointer;
     }
 
-    /* TOOLTIP */
+    /* =====================================================
+       TOOLTIP
+       ===================================================== */
+
     #tooltip {
       position: absolute;
       background: #0b0b0b;
@@ -79,23 +92,27 @@
       color: #ddd;
     }
 
-    /* COLORES DE ESTADO */
+    /* =====================================================
+       COLORES DE ESTADO
+       ===================================================== */
+
     .ruta-verde { color: #00ff7f; font-weight: bold; }
     .ruta-amarillo { color: #ffd700; font-weight: bold; }
     .ruta-rojo { color: #ff4d4d; font-weight: bold; }
 
-    /* CONTROLES INFERIORES */
+    /* =====================================================
+       CONTROLES INFERIORES
+       ===================================================== */
+
     #controls {
       position: absolute;
       bottom: 70px;
       left: 50%;
       transform: translateX(-50%);
-
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 6px;
-
       z-index: 10000;
     }
 
@@ -136,7 +153,10 @@
       text-align: center;
     }
 
-    /* FIRMA */
+    /* =====================================================
+       FIRMA
+       ===================================================== */
+
     #firma {
       position: absolute;
       bottom: 18px;
@@ -154,9 +174,24 @@
 
 <body>
 
+<!-- =====================================================
+     🔐 GUARDIA DE SEGURIDAD DE LA INTRANET
+     ===================================================== -->
+<script>
+  // Recupera la sesión guardada al hacer login
+  const sessionId = localStorage.getItem("sessionId");
+
+  // Si NO hay sesión válida, se bloquea el acceso
+  if (!sessionId) {
+    // Redirige inmediatamente al login
+    window.location.href = "/IntraNetEX/Login/index.html";
+  }
+</script>
+
+<!-- Tooltip dinámico del mapa -->
 <div id="tooltip"></div>
 
-<!-- CONTROLES -->
+<!-- CONTROLES INFERIORES -->
 <div id="controls">
   <div class="controls-row">
     <button id="btnActualizar">🔄 Actualizar datos</button>
@@ -168,6 +203,7 @@
   </div>
 </div>
 
+<!-- FIRMA -->
 <footer id="firma">
   Developed by <strong>JCPariona</strong> © 2026
 </footer>
@@ -957,7 +993,8 @@ function inicializarMapa() {
 if (btnActualizar) {
   btnActualizar.addEventListener("click", cargarDatos);
 }
-
+<button id="logoutBtn" class="logout-btn">Cerrar sesión</button>
 // Carga inicial automática (ANTES ERA EL FETCH)
 cargarDatos();
 </script>
+
