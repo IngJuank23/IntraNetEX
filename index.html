@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Acceso | Intranet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS del login -->
+  <link rel="stylesheet" href="Login/login.css" />
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="login-box">
+
+      <!-- LOGO CORRECTO -->
+      <img src="Login/logoIN.svg" alt="Logo" class="login-logo" />
+
+      <h2>Acceso</h2>
+
+      <form id="loginForm">
+        <input type="text" id="usuario" placeholder="Usuario" required />
+        <input type="password" id="password" placeholder="Contraseña" required />
+
+        <button type="submit">Ingresar</button>
+      </form>
+
+      <p id="loginMessage" class="login-message"></p>
+
+    </div>
+  </div>
+      <!-- FIRMA -->
+  <footer id="firma">
+    Developed by <strong>JCPariona</strong> © 2026
+  </footer>
+
+  <!-- JS del login -->
+  <script src="Login/login.js"></script>
+</body>
+</html>
+

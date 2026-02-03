@@ -1,0 +1,122 @@
+/* =====================================================
+   CONFIGURACIÓN GLOBAL DE LA PÁGINA
+   ===================================================== */
+
+/* Elimina márgenes por defecto y fija fondo negro */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  height: 100%;
+  overflow: hidden; /* Evita scroll */
+}
+
+/* Contenedor principal de la aplicación */
+#app {
+  width: 100vw;   /* 100% del ancho de la ventana */
+  height: 100vh;  /* 100% del alto de la ventana */
+}
+
+/* Contenedor del mapa interactivo */
+#mapa {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =====================================================
+   TOOLTIP (INFORMACIÓN DE ESTADOS / RUTAS)
+   ===================================================== */
+
+/*
+ Tooltip flotante que aparece al pasar el mouse
+ sobre un estado o punto del mapa
+*/
+#tooltip {
+  position: absolute;
+  background: #0b0b0b;
+  border: 1px solid #ffd500;
+  border-radius: 8px;
+  padding: 12px;
+  min-width: 260px;
+
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+
+  /* CLAVES DE COMPORTAMIENTO */
+  display: none;        /* Oculto por defecto */
+  pointer-events: none; /* No bloquea clics del mapa */
+  z-index: 9999;        /* Siempre encima de todo */
+}
+
+/* Clase que se agrega por JS para mostrar el tooltip */
+#tooltip.visible {
+  display: block;
+}
+
+/* Título principal dentro del tooltip */
+.tooltip-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffd500;
+  margin-bottom: 6px;
+}
+
+/* Línea normal de información */
+.tooltip-line {
+  margin: 3px 0;
+}
+
+/* Separador visual dentro del tooltip */
+.tooltip-separator {
+  height: 1px;
+  background: #333;
+  margin: 8px 0;
+}
+
+/* Información de destinos */
+.tooltip-destino {
+  font-size: 12px;
+  margin: 4px 0;
+  color: #ddd;
+}
+
+/* Destaca partes importantes del destino */
+.tooltip-destino strong {
+  color: #ffd500;
+}
+
+/* Estado de ruta NO disponible */
+.ruta-no {
+  color: #ff5252;
+}
+
+/* Estado de ruta disponible */
+.ruta-si {
+  color: #4caf50;
+}
+
+
+/* =====================================================
+   BOTÓN CERRAR SESIÓN
+   ===================================================== */
+
+/*
+ Botón visible en la intranet para cerrar sesión.
+ Solo elimina datos locales y redirige al login.
+*/
+.logout-btn {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Efecto hover del botón de cerrar sesión */
+.logout-btn:hover {
+  background: #cc0000;
+}
