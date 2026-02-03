@@ -172,6 +172,20 @@
 </head>
   
 <body>
+<!-- ===========================
+     BARRA SUPERIOR
+     =========================== -->
+<header id="topbar">
+  <div class="topbar-left">
+    <!-- aquí luego va el saludo -->
+  </div>
+
+  <div class="topbar-right">
+    <button id="logoutBtn" class="logout-btn">
+      🔒 Cerrar sesión
+    </button>
+  </div>
+</header>
 
 <!-- =====================================================
       GUARDIA DE SEGURIDAD DE LA INTRANET
@@ -186,12 +200,6 @@
     window.location.href = "/IntraNetEX/index.html";
   }
 </script>
-<!-- ===========================
-     BOTÓN CERRAR SESIÓN
-     =========================== -->
-<button id="logoutBtn" class="logout-btn">
-  🔒 Cerrar sesión
-</button>
 
 <!-- Tooltip dinámico del mapa -->
 <div id="tooltip"></div>
@@ -1019,6 +1027,7 @@ if (btnActualizar) {
 // Carga inicial automática (ANTES ERA EL FETCH)
 cargarDatos();
 </script>
+
 
 
 
