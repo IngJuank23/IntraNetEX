@@ -215,6 +215,25 @@
   </div>
 </div>
 
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const saludo = document.getElementById("saludoUsuario");
+
+    const rol = localStorage.getItem("rol");
+    const nombre = localStorage.getItem("nombre"); // opcional
+
+    if (saludo) {
+      if (nombre) {
+        saludo.textContent = `Bienvenido ${nombre}`;
+      } else if (rol) {
+        saludo.textContent = `Bienvenido ${rol}`;
+      } else {
+        saludo.textContent = "Bienvenido";
+      }
+    }
+  });
+</script>
+
     <!-- ===========================
      JS: CERRAR SESIÓN
      =========================== -->
@@ -1025,6 +1044,7 @@ if (btnActualizar) {
 // Carga inicial automática (ANTES ERA EL FETCH)
 cargarDatos();
 </script>
+
 
 
 
