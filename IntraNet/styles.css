@@ -165,3 +165,50 @@ html, body {
 .logout-btn:hover {
   background: #cc0000;
 }
+/* =====================================================
+   TOPBAR
+   ===================================================== */
+
+#topbar {
+  height: 58px;
+  width: 100%;
+  background: #000;
+  border: 2px solid #ffd500;
+  border-radius: 10px;
+  margin: 8px;
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  z-index: 10001;
+}
+
+.topbar-left {
+  font-size: 16px;
+  color: #00ff7f;
+  font-weight: bold;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.logout-btn {
+  background: #111;
+  color: #ffd500;
+  border: 1px solid #ffd500;
+  padding: 6px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.logout-btn:hover {
+  background: #ffd500;
+  color: #000;
+}
+
