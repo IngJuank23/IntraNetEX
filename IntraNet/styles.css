@@ -97,74 +97,6 @@ html, body {
   color: #4caf50;
 }
 
-
-/* =====================================================
-   BOTÓN CERRAR SESIÓN
-   ===================================================== */
-
-/*
- Botón visible en la intranet para cerrar sesión.
- Solo elimina datos locales y redirige al login.
-*/
-.logout-btn {
-  background: #ff4444;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-/* Efecto hover del botón de cerrar sesión */
-.logout-btn:hover {
-  background: #cc0000;
-}
-
-/* ===========================
-   BARRA SUPERIOR
-   =========================== */
-#topbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 56px;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  z-index: 10001;
-  box-sizing: border-box;
-}
-
-.topbar-left {
-  color: #00ff7f;
-  font-size: 14px;
-}
-
-.topbar-right {
-  display: flex;
-  align-items: center;
-}
-
-/* ===========================
-   BOTÓN CERRAR SESIÓN
-   =========================== */
-.logout-btn {
-  background: #ff4444;
-  color: #fff;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.logout-btn:hover {
-  background: #cc0000;
-}
 /* =====================================================
    TOPBAR – ESTILO MATRIX
    ===================================================== */
@@ -225,6 +157,7 @@ html, body {
   color: #000;
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
 }
+
 
 
 
