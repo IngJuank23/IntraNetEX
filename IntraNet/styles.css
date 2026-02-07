@@ -21,8 +21,14 @@ html, body {
 #mapa {
   width: 100%;
   height: 100%;
-}
 
+  position: relative;
+  z-index: 1;
+
+  /* baja visualmente el mapa para que no tape la topbar */
+  padding-top: 72px;
+  box-sizing: border-box;
+}
 
 /* =====================================================
    TOOLTIP (INFORMACIÓN DE ESTADOS / RUTAS)
@@ -157,6 +163,7 @@ html, body {
   color: #000;
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
 }
+
 
 
 
