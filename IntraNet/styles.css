@@ -23,7 +23,7 @@ html, body {
   max-width: 1200px;
   max-height: 720px;
 
-  width: 100%;
+  width: 75%;
   height: auto;
 
   /* centrado */
@@ -199,6 +199,7 @@ html, body {
   height: auto;          /* CLAVE: mantiene proporción */
   display: block;        /* evita espacios raros */
 }
+
 
 
 
