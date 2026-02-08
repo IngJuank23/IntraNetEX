@@ -195,10 +195,11 @@ html, body {
 
 /* El SVG se adapta al ancho del contenedor */
 #mapa svg{
-  width: 75%;
+  width: 50%;
   height: auto;          /* CLAVE: mantiene proporción */
   display: block;        /* evita espacios raros */
 }
+
 
 
 
