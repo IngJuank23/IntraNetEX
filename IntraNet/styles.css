@@ -14,19 +14,24 @@ html, body {
 /* Contenedor principal de la aplicación */
 #app {
   width: 100vw;   /* 100% del ancho de la ventana */
-  height: 100vh;  /* 100% del alto de la ventana */
+  min-height: 100vh;  /* 100% del alto de la ventana */
 }
 
 /* Contenedor del mapa interactivo */
 #mapa {
+  /* tamaño controlado */
+  max-width: 1200px;
+  max-height: 720px;
+
   width: 100%;
-  height: 100%;
+  height: auto;
+
+  /* centrado */
+  margin: 24px auto 0;
 
   position: relative;
   z-index: 1;
 
-  /* baja visualmente el mapa para que no tape la topbar */
-  padding-top: 72px;
   box-sizing: border-box;
 }
 
@@ -165,6 +170,7 @@ html, body {
   color: #000;
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
 }
+
 
 
 
