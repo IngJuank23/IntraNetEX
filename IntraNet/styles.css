@@ -14,8 +14,15 @@ html, body {
 /* Contenedor principal de la aplicación */
 #app {
   width: 100vw;   /* 100% del ancho de la ventana */
-  min-height: 100vh;  /* 100% del alto de la ventana */
+  height: 100vh;  /* 100% del alto de la ventana */
 }
+
+/* Contenedor del mapa interactivo */
+#mapa {
+  width: 100%;
+  height: 100%;
+}
+
 
 /* =====================================================
    TOOLTIP (INFORMACIÓN DE ESTADOS / RUTAS)
@@ -90,98 +97,26 @@ html, body {
   color: #4caf50;
 }
 
+
 /* =====================================================
-   TOPBAR – ESTILO MATRIX
+   BOTÓN CERRAR SESIÓN
    ===================================================== */
 
-#topbar {
-  width: calc(100% - 16px);
-  height: 56px;
-
-  background: #000;                 /* fondo negro */
-  border: 2px solid #00ff00;        /* verde del mapa */
-  border-radius: 10px;
-
-  margin: 8px;
-  padding: 0 18px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  box-sizing: border-box;
-
-  /* sombra verde suave */
-  box-shadow: 0 0 12px rgba(0, 255, 0, 0.35);
-
-  position: fixed;
-  top: 8px;
-  left: 8px;
-  z-index: 100;
-}
-
-/* Saludo */
-.topbar-left {
-  font-size: 16px;
-  font-weight: bold;
-  color: #00ff00; /* verde brillante como el mapa */
-  text-shadow: 0 0 6px rgba(0, 255, 0, 0.6);
-}
-
-/* Contenedor derecho */
-.topbar-right {
-  display: flex;
-  align-items: center;
-}
-
-/* Botón cerrar sesión */
+/*
+ Botón visible en la intranet para cerrar sesión.
+ Solo elimina datos locales y redirige al login.
+*/
 .logout-btn {
-  background: #000;
-  color: #00ff00;
-  border: 1px solid #00ff00;
-  padding: 6px 14px;
-  font-size: 13px;
-  cursor: pointer;
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 8px 14px;
   border-radius: 6px;
-
-  text-shadow: 0 0 4px rgba(0, 255, 0, 0.6);
+  cursor: pointer;
+  font-weight: bold;
 }
 
+/* Efecto hover del botón de cerrar sesión */
 .logout-btn:hover {
-  background: #00ff00;
-  color: #000;
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+  background: #cc0000;
 }
-
-/* ===========================
-   MAPA PRO (SVG RESPONSIVE)
-   =========================== */
-
-/* Contenedor del mapa */
-#mapa{
-  max-width: 1400px;     /* ajustable */
-  margin: 24px auto 0;   /* centrado */
-  padding-top: 72px;     /* espacio para la topbar (si la dejas arriba) */
-  box-sizing: border-box;
-}
-
-/* El SVG se adapta al ancho del contenedor */
-#mapa svg{
-  width: 100%;
-  height: auto;          /* CLAVE: mantiene proporción */
-  display: block;        /* evita espacios raros */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
