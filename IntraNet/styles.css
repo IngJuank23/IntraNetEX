@@ -17,24 +17,6 @@ html, body {
   min-height: 100vh;  /* 100% del alto de la ventana */
 }
 
-/* Contenedor del mapa interactivo */
-#mapa {
-  /* tamaño controlado */
-  max-width: 1200px;
-  max-height: 720px;
-
-  width: 75%;
-  height: auto;
-
-  /* centrado */
-  margin: 24px auto 0;
-
-  position: relative;
-  z-index: 1;
-
-  box-sizing: border-box;
-}
-
 /* =====================================================
    TOOLTIP (INFORMACIÓN DE ESTADOS / RUTAS)
    ===================================================== */
@@ -171,16 +153,6 @@ html, body {
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
 }
 
-/* =====================================================
-   SVG DEL MAPA – CONTROL DE ESCALA
-   ===================================================== */
-
-#mapa svg {
-  width: 100%;
-  height: auto;        /* mantiene proporción */
-  max-height: 100%;
-  display: block;
-}
 /* ===========================
    MAPA PRO (SVG RESPONSIVE)
    =========================== */
@@ -199,6 +171,7 @@ html, body {
   height: auto;          /* CLAVE: mantiene proporción */
   display: block;        /* evita espacios raros */
 }
+
 
 
 
