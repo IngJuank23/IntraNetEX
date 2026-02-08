@@ -132,7 +132,7 @@ html, body {
   /* sombra verde suave */
   box-shadow: 0 0 12px rgba(0, 255, 0, 0.35);
 
-  position: relative;
+  position: fixed;
   top: 8px;
   left: 8px;
   z-index: 100;
@@ -181,6 +181,25 @@ html, body {
   max-height: 100%;
   display: block;
 }
+/* ===========================
+   MAPA PRO (SVG RESPONSIVE)
+   =========================== */
+
+/* Contenedor del mapa */
+#mapa{
+  max-width: 1400px;     /* ajustable */
+  margin: 24px auto 0;   /* centrado */
+  padding-top: 72px;     /* espacio para la topbar (si la dejas arriba) */
+  box-sizing: border-box;
+}
+
+/* El SVG se adapta al ancho del contenedor */
+#mapa svg{
+  width: 100%;
+  height: auto;          /* CLAVE: mantiene proporción */
+  display: block;        /* evita espacios raros */
+}
+
 
 
 
