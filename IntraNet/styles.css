@@ -81,7 +81,7 @@ html, body {
   width: 100vw;
   height: 100vh;
 
-  padding-top: 90px; /* 🔥 ESPACIO PARA TOPBAR */
+  padding-top: 120px; /* 🔥 baja el mapa */
 
   display: flex;
   justify-content: center;
@@ -154,3 +154,4 @@ html, body {
 
 .ruta-no { color: #ff5252; }
 .ruta-si { color: #4caf50; }
+
