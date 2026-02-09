@@ -27,6 +27,14 @@ html, body {
   align-items: center;
 }
 
+#mapa svg {
+  width: 100%;
+  height: auto;
+
+  max-width: 1400px;
+  max-height: 90vh;
+}
+
 /* =====================================================
    TOOLTIP (INFORMACIÓN DE ESTADOS / RUTAS)
    ===================================================== */
@@ -123,5 +131,6 @@ html, body {
 .logout-btn:hover {
   background: #cc0000;
 }
+
 
 
