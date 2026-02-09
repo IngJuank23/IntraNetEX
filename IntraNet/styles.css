@@ -2,22 +2,92 @@
    CONFIGURACIÓN GLOBAL DE LA PÁGINA
    ===================================================== */
 
-/* Elimina márgenes por defecto y fija fondo negro */
 html, body {
   margin: 0;
   padding: 0;
   background: #000;
   height: 100%;
-  overflow: hidden; /* Evita scroll */
+  overflow: hidden;
+  font-family: Arial, sans-serif;
 }
 
-/* Contenedor principal de la aplicación */
+
+/* =====================================================
+   TOPBAR – MATRIX
+   ===================================================== */
+
+#topbar {
+  width: calc(100% - 64px);
+  height: 64px;
+
+  background: #000;
+  border: 2px solid #00ff00;
+  border-radius: 14px;
+
+  margin: 24px auto 0;
+  padding: 0 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 0 10px rgba(0,255,0,.4),
+    inset 0 0 8px rgba(0,255,0,.25);
+
+  position: relative;
+  z-index: 1000;
+}
+
+.topbar-left {
+  font-size: 16px;
+  font-weight: bold;
+  color: #00ff00;
+  text-shadow: 0 0 6px rgba(0,255,0,.7);
+}
+
+
+/* =====================================================
+   BOTÓN LOGOUT (VERSIÓN MATRIX)
+   ===================================================== */
+
+.logout-btn {
+  background: transparent;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  text-shadow: 0 0 4px rgba(0,255,0,.6);
+  transition: all .2s ease;
+}
+
+.logout-btn:hover {
+  background: #00ff00;
+  color: #000;
+  box-shadow: 0 0 12px rgba(0,255,0,.9);
+}
+
+
+/* =====================================================
+   APP + MAPA (TU CONFIG ORIGINAL + OFFSET TOPBAR)
+   ===================================================== */
+
 #app {
-  width: 100vw;   /* 100% del ancho de la ventana */
-  height: 100vh;  /* 100% del alto de la ventana */
+  width: 100vw;
+  height: 100vh;
+
+  padding-top: 90px; /* 🔥 ESPACIO PARA TOPBAR */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Contenedor del mapa interactivo */
 #mapa {
   width: 75%;
   height: 75%;
@@ -30,19 +100,15 @@ html, body {
 #mapa svg {
   width: 75%;
   height: auto;
-
   max-width: 1400px;
   max-height: 90vh;
 }
 
+
 /* =====================================================
-   TOOLTIP (INFORMACIÓN DE ESTADOS / RUTAS)
+   TOOLTIP
    ===================================================== */
 
-/*
- Tooltip flotante que aparece al pasar el mouse
- sobre un estado o punto del mapa
-*/
 #tooltip {
   position: absolute;
   background: #0b0b0b;
@@ -51,22 +117,18 @@ html, body {
   padding: 12px;
   min-width: 260px;
 
-  font-family: Arial, sans-serif;
   font-size: 13px;
-  color: #ffffff;
+  color: #fff;
 
-  /* CLAVES DE COMPORTAMIENTO */
-  display: none;        /* Oculto por defecto */
-  pointer-events: none; /* No bloquea clics del mapa */
-  z-index: 9999;        /* Siempre encima de todo */
+  display: none;
+  pointer-events: none;
+  z-index: 9999;
 }
 
-/* Clase que se agrega por JS para mostrar el tooltip */
 #tooltip.visible {
   display: block;
 }
 
-/* Título principal dentro del tooltip */
 .tooltip-title {
   font-size: 15px;
   font-weight: bold;
@@ -74,65 +136,21 @@ html, body {
   margin-bottom: 6px;
 }
 
-/* Línea normal de información */
-.tooltip-line {
-  margin: 3px 0;
-}
+.tooltip-line { margin: 3px 0; }
 
-/* Separador visual dentro del tooltip */
 .tooltip-separator {
   height: 1px;
   background: #333;
   margin: 8px 0;
 }
 
-/* Información de destinos */
 .tooltip-destino {
   font-size: 12px;
   margin: 4px 0;
   color: #ddd;
 }
 
-/* Destaca partes importantes del destino */
-.tooltip-destino strong {
-  color: #ffd500;
-}
+.tooltip-destino strong { color: #ffd500; }
 
-/* Estado de ruta NO disponible */
-.ruta-no {
-  color: #ff5252;
-}
-
-/* Estado de ruta disponible */
-.ruta-si {
-  color: #4caf50;
-}
-
-
-/* =====================================================
-   BOTÓN CERRAR SESIÓN
-   ===================================================== */
-
-/*
- Botón visible en la intranet para cerrar sesión.
- Solo elimina datos locales y redirige al login.
-*/
-.logout-btn {
-  background: #ff4444;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-/* Efecto hover del botón de cerrar sesión */
-.logout-btn:hover {
-  background: #cc0000;
-}
-
-
-
-
-
+.ruta-no { color: #ff5252; }
+.ruta-si { color: #4caf50; }
