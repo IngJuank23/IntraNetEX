@@ -212,7 +212,18 @@
     window.location.href = "/IntraNetEX/Login/index.html";
   }
 </script>
+<!-- 🔥 TOPBAR VA AQUÍ -->
+<header id="topbar">
+  <div class="topbar-left">
+    <span id="saludoUsuario">👋 Bienvenido</span>
+  </div>
 
+  <div class="topbar-right">
+    <button id="logoutBtn" class="logout-btn">
+      🔒 Cerrar sesión
+    </button>
+  </div>
+</header>
 <!-- Tooltip dinámico del mapa -->
 <div id="tooltip"></div>
 
@@ -904,6 +915,7 @@ if (btnActualizar) {
 // Carga inicial automática (ANTES ERA EL FETCH)
 cargarDatos();
 </script>
+
 
 
 
