@@ -22,9 +22,24 @@
     }
 
     #app {
-      width: 100vw;
-      height: 100vh;
-    }
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   #mapa {
+   width: 80vw;
+   max-width: 1200px;
+
+   height: auto;
+   aspect-ratio: 3300 / 2550;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
 
     /* =====================================================
        MAPA SVG
@@ -879,6 +894,7 @@ if (btnActualizar) {
 // Carga inicial automática (ANTES ERA EL FETCH)
 cargarDatos();
 </script>
+
 
 
 
