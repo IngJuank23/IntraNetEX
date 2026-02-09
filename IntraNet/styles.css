@@ -81,7 +81,7 @@ html, body {
   width: 100vw;
   height: 100vh;
 
-  padding-top: 120px; /* 🔥 baja el mapa */
+  padding-top: clamp(100px, 8vh, 140px); /* 🔥 baja el mapa */
 
   display: flex;
   justify-content: center;
@@ -154,4 +154,5 @@ html, body {
 
 .ruta-no { color: #ff5252; }
 .ruta-si { color: #4caf50; }
+
 
